@@ -50,12 +50,34 @@ h2{
         justify-content:space-between;
     }
     .card{
-        width: 150px!important;
+        width: 12rem!important;
         margin-left: 5px!important;
-        margin-right: 5px!important;
+        margin-right: px!important;
     }
 }
-@media screen and (max-width:350px) {
+@media screen and (max-width:500px) {
+    .container{
+        width: 100%!important;
+        justify-content:space-between;
+    }
+    .card{
+        width: 11rem!important;
+        margin-left: 5px!important;
+        margin-right: px!important;
+    }
+}
+@media screen and (max-width:420px) {
+    .container{
+        width: 100%!important;
+        justify-content:space-between;
+    }
+    .card{
+        width: 9rem!important;
+        margin-left: 5px!important;
+        margin-right: px!important;
+    }
+}
+@media screen and (max-width:355px) {
     .container{
         width: 100%!important;
         justify-content:center;
