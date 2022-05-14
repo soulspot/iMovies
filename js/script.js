@@ -36,7 +36,7 @@ fetchMovie = async (data) => {
         let element = movie[i];
         console.table(element);
         str += `
-        <a href="details.html?query=${element.movieKey}"><div class="card mx-3 my-3" style="width: 200px;">
+        <a href="details.html?query=${element.movieKey}"><div class="card mx-3 my-3">
         <img src="${element.moviePoster}" class="card-img-top" alt="${element.movieTitle
             }'s image">
         <div class="card-body">

@@ -30,6 +30,7 @@ h2{
     box-shadow: 2px 5px 10px;
     min-height: 430px;
     overflow: hidden;
+    width: 200px;
 }
 .card-text{
     font-size: 15px!important;
@@ -41,4 +42,14 @@ h2{
 }
 .none{
     display: none!important;
+}
+
+@media screen and (max-width:900px) {
+    .container{
+        width: 100%!important;
+        justify-content: space-between;
+    }
+    .card{
+        width: 140px!important;
+    }
 }
