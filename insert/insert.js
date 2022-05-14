@@ -1,6 +1,7 @@
 let container = document.querySelector(".container");
 let url = "admin.json";
 let str = "";
+var size;
 // let loading=document.querySelector("#loading");
 //format date
 formatDate = (dt) => {
@@ -33,7 +34,8 @@ fetchMovie = async (data) => {
     let movie = await responce.json();
     size=movie.length;
     console.log(size)
-    document.querySelector("#movieKey").value=size;
+    localStorage.setItem("movieKey")=Math.floor((Math.random() * 10000) + 1);
+    document.querySelector("#movieKey").value=localStorage.getItem("movieKey");
 };
 fetchAdminInformation();
 
@@ -54,10 +56,5 @@ jQuery('#frmSubmit').on('submit', function (e) {
             }
         });
 
-    // https://script.google.com/macros/s/AKfycby9bF0KY2YgyajD5IsBkbtAnh8t-uFAe4l4thaPC640P_NI1zDctYJIUi4st-6ZlD4u6A/exec
-        
-    //
-
-    // get link
-    //https://script.google.com/macros/s/AKfycbyoXMFQBpWHkP5LIRrMcBN4GrzcMvHkGEWJ116EiZ8n_4dJ9JWuKd3nW9n5f17SwgGp/exec
+    
 });
