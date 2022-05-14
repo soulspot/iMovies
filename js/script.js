@@ -22,7 +22,7 @@ formatDate = (dt) => {
 fetchAdminInformation = async () => {
     let responce = await fetch(url);
     let data = await responce.json();
-    console.log(data);
+    // console.log(data);
     fetchMovie(data);
 };
 //fetch movie information
@@ -30,11 +30,11 @@ fetchMovie = async (data) => {
     loading.classList.remove("none");
     let responce = await fetch(data.movies);
     let movie = await responce.json();
-    console.table(movie);
+    // console.table(movie);
 
     for (let i = 1; i < movie.length; i++) {
         let element = movie[i];
-        console.table(element);
+        // console.table(element);
         str += `
         <a href="details.html?query=${element.movieKey}"><div class="card mx-3 my-3">
         <img src="${element.moviePoster}" class="card-img-top" alt="${element.movieTitle

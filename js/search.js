@@ -11,7 +11,7 @@ geturl = `{"` + geturl + `"}`;
 searchItem = JSON.parse(geturl);
 mainFind = searchItem.query.split('+').join(' ');
 mainFind = mainFind.toLowerCase();
-console.log(mainFind)
+// console.log(mainFind)
 
 
 titleCheck=(t1,t2)=>{
@@ -41,7 +41,7 @@ formatDate = (dt) => {
 fetchAdminInformation = async () => {
     let responce = await fetch(url);
     let data = await responce.json();
-    console.log(data);
+    // console.log(data);
     fetchMovie(data);
 };
 
@@ -52,7 +52,7 @@ fetchMovie = async (data) => {
     loading.classList.remove("none");
     let responce = await fetch(data.movies);
     let movie = await responce.json();
-    console.table(movie);
+    // console.table(movie);
 
     for (let i = 1; i < movie.length; i++) {
         let element = movie[i];
