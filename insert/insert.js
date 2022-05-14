@@ -21,7 +21,7 @@ checkLogin = () => {
   if (loginCheckVar == "true") {
     fetchAdminInformation();
   } else {
-    window.location = "iMovies/insert/index.html";
+    window.location = "index.html";
   }
 };
 checkLogin();
