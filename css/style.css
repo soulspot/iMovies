@@ -58,7 +58,7 @@ h2{
 @media screen and (max-width:500px) {
     .container{
         width: 100%!important;
-        justify-content:space-between;
+        justify-content:space-around;
     }
     .card{
         width: 11rem!important;
@@ -69,15 +69,26 @@ h2{
 @media screen and (max-width:420px) {
     .container{
         width: 100%!important;
-        justify-content:space-between;
+        justify-content:space-around;
     }
     .card{
-        width: 9rem!important;
+        width: 11rem!important;
         margin-left: 5px!important;
-        margin-right: px!important;
+        margin-right: 5px!important;
     }
 }
-@media screen and (max-width:355px) {
+@media screen and (max-width:398px) {
+    .container{
+        width: 100%!important;
+        justify-content:space-around;
+    }
+    .card{
+        width: 10rem!important;
+        margin-left: 5px!important;
+        margin-right: 5px!important;
+    }
+}
+@media screen and (max-width:365px) {
     .container{
         width: 100%!important;
         justify-content:center;
