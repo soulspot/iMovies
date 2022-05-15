@@ -50,12 +50,12 @@ h2{
         justify-content:space-between;
     }
     .card{
-        width: 12rem!important;
+        width: 14rem!important;
         margin-left: 5px!important;
         margin-right: px!important;
     }
 }
-@media screen and (max-width:500px) {
+@media screen and (max-width:520px) {
     .container{
         width: 100%!important;
         justify-content:space-around;
@@ -91,11 +91,22 @@ h2{
 @media screen and (max-width:365px) {
     .container{
         width: 100%!important;
+        justify-content:space-around;
+        align-items: center;
+
+    }
+    .card{
+        width: 9rem!important;
+    }
+}
+@media screen and (max-width:335px) {
+    .container{
+        width: 100%!important;
         justify-content:center;
         align-items: center;
 
     }
     .card{
-        width: 200px!important;
+        width: 14rem!important;
     }
 }
