@@ -1,9 +1,8 @@
 let container = document.querySelector(".container");
 let url = "js/admin.json";
 let str = "";
-
 let loading=document.querySelector("#loading");
-
+var text="";
 let geturl = window.location.search.slice(1);
 geturl = geturl.replace(/=/g, `":"`);
 geturl = `{"` + geturl + `"}`;
@@ -12,12 +11,6 @@ searchItem = JSON.parse(geturl);
 mainFind = searchItem.query.split('+').join(' ');
 mainFind = mainFind.toLowerCase();
 // console.log(mainFind)
-
-
-titleCheck=(t1,t2)=>{
-    result=t1.includes(t2);
-    return result;
-}
 
 
 //format date
@@ -44,7 +37,10 @@ fetchAdminInformation = async () => {
     // console.log(data);
     fetchMovie(data);
 };
-
+lowerCase=()=>{
+    temp = text.toString().toLowerCase();
+    return temp;
+}
 
 
 //fetch movie information
@@ -56,10 +52,8 @@ fetchMovie = async (data) => {
 
     for (let i = 1; i < movie.length; i++) {
         let element = movie[i];
-    
-        
-        if (titleCheck(element.movieTitle.toLowerCase(),mainFind)) {
-
+        text=element.movieTitle;
+        if (lowerCase(text).includes(mainFind)) {
             str += `
             <a href="details.html?query=${element.movieKey}"><div class="card mx-3 my-3">
             <img src="${element.moviePoster}" class="card-img-top" alt="${element.movieTitle
