@@ -71,7 +71,7 @@ fetchMovie = async (data) => {
         <div id="ss1" class="screenShot"><img src="${element.screenShot1}" alt=""></div>
         <div id="ss1" class="screenShot"><img src="${element.screenShot2}" alt=""></div>
         <div id="ss1" class="screenShot"><img src="${element.screenShot3}" alt=""></div>
-        <div class="db"><a href="${element.downlaodLink}"><button type="button" class="btn btn-success btn-lg">Download</button></a></div>
+        <div class="db"><a href="iMoviesCDN.html?query=${element.movieKey}"><button type="button" class="btn btn-success btn-lg">Download</button></a></div>
         `;
             break;
         }

@@ -9,7 +9,7 @@ if(localStorage.getItem("joinChat")!="true"){
         join.addEventListener("click",()=>{
             localStorage.setItem("joinChat",true);
             myModal.hide(modalToggle);
-            window.location.href="https://chat.whatsapp.com/Fv60jkWR3bA6Cl8mUuqVA6";
+            window.location.href="https://t.me/iMoviesOfficial";
         })
         close.addEventListener("click",()=>{
             localStorage.setItem("joinChat",false);
