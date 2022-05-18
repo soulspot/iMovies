@@ -1,6 +1,7 @@
 let container = document.querySelector(".container");
 let url = "js/admin.json";
 let str = "";
+let btr = "";
 let loading=document.querySelector("#loading");
 //format date
 formatDate = (dt) => {
@@ -35,7 +36,9 @@ fetchMovie = async (data) => {
     for (let i = 1; i < movie.length; i++) {
         let element = movie[i];
         // console.table(element);
-        str += `
+        if (element.priority==true) {
+            // console.log(true);
+            str += `
         <a href="details.html?query=${element.movieKey}"><div class="card mx-3 my-3">
         <img src="${element.moviePoster}" class="card-img-top" alt="${element.movieTitle
             }'s image">
@@ -47,8 +50,24 @@ fetchMovie = async (data) => {
         </div>
         </div></a>
            `;
+        }
+        if(element.priority==false){
+            btr += `
+            <a href="details.html?query=${element.movieKey}"><div class="card mx-3 my-3">
+            <img src="${element.moviePoster}" class="card-img-top" alt="${element.movieTitle
+                }'s image">
+            <div class="card-body">
+            <p class="card-text text-uppercase">Download <strong>${element.movieTitle
+                }</strong> in Full HD quality <strong class="text-danger">${formatDate(
+                    element.movieDate
+                )}</strong></p>
+            </div>
+            </div></a>
+               `;
+        }
     }
     loading.classList.add("none");
-    container.innerHTML = str;
+    result=str.concat(btr);
+    container.innerHTML =result;
 };
 fetchAdminInformation();
