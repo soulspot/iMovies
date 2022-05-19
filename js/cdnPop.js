@@ -29,8 +29,9 @@ fetchMovie = async (data) => {
     for (let i = 1; i < movie.length; i++) {
         let element = movie[i];
         if(element.movieKey==mainFind){
-            // console.table(element);
-            heading.innerHTML=`<h1>Download ${element.movieTitle} Full HD</h1>`
+            if ((element.movieTitle).length!=0) {
+                heading.innerHTML=`<h1>Download ${element.movieTitle} Full HD</h1>`
+            }
             if((element.d480).length!=0){
                 // console.log(true);
                 str+=`<a target="_blank" href="${element.d480}"><button type="button" class="btn btn-outline-danger mx-3 my-3">Downlaod in 480p </button></a>`;
