@@ -38,6 +38,9 @@ fetchMovie = async (data) => {
             if((element.d720).length!=0){
                 str+=`<a target="_blank" href="${element.d720}"><button type="button" class="btn btn-outline-danger mx-3 my-3">Downlaod in 720p</button></a>`;
             }
+            if((element.d720s2).length!=0){
+                str+=`<a target="_blank" href="${element.d720s2}"><button type="button" class="btn btn-outline-danger mx-3 my-3">Downlaod in 720p Server 2</button></a>`;
+            }
             
             if((element.d1080).length!=0){
                 str+=`<a target="_blank" href="${element.d1080}"><button type="button" class="btn btn-outline-danger mx-3 my-3">Downlaod in 1080p</button></a>`;
