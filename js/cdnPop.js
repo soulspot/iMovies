@@ -29,11 +29,15 @@ fetchMovie = async (data) => {
     for (let i = 1; i < movie.length; i++) {
         let element = movie[i];
         if(element.movieKey==mainFind){
-            console.table(element);
+            // console.table(element);
             heading.innerHTML=`<h1>Download ${element.movieTitle} Full HD</h1>`
             if((element.d480).length!=0){
-                console.log(true);
+                // console.log(true);
                 str+=`<a target="_blank" href="${element.d480}"><button type="button" class="btn btn-outline-danger mx-3 my-3">Downlaod in 480p </button></a>`;
+            }
+            if((element.d480s2).length!=0){
+                // console.log(true);
+                str+=`<a target="_blank" href="${element.d480s2}"><button type="button" class="btn btn-outline-danger mx-3 my-3">Downlaod in 480p server 2</button></a>`;
             }
             if((element.d720).length!=0){
                 str+=`<a target="_blank" href="${element.d720}"><button type="button" class="btn btn-outline-danger mx-3 my-3">Downlaod in 720p</button></a>`;
@@ -44,6 +48,9 @@ fetchMovie = async (data) => {
             
             if((element.d1080).length!=0){
                 str+=`<a target="_blank" href="${element.d1080}"><button type="button" class="btn btn-outline-danger mx-3 my-3">Downlaod in 1080p</button></a>`;
+            }
+            if((element.d1080s2).length!=0){
+                str+=`<a target="_blank" href="${element.d1080s2}"><button type="button" class="btn btn-outline-danger mx-3 my-3">Downlaod in 1080p server 2</button></a>`;
             }
         }
         container.innerHTML=`<h2 id="down" class="my-4">Download link's</h2>
